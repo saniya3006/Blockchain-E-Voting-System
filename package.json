@@ -1,0 +1,25 @@
+{
+  "name": "blockchain-e-voting",
+  "version": "1.0.0",
+  "description": "BlockVote - Decentralized E-Voting System using Blockchain (educational B.Tech mini project)",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "coverage": "hardhat coverage",
+    "node": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "seed:local": "hardhat run scripts/seed-demo.js --network localhost",
+    "votes:local": "hardhat run scripts/cast-sample-votes.js --network localhost",
+    "demo:local": "npm run deploy:local && npm run seed:local && npm run votes:local",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "seed:sepolia": "hardhat run scripts/seed-demo.js --network sepolia",
+    "frontend": "npm --prefix frontend run dev"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.17"
+  }
+}
